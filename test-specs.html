@@ -2,19 +2,29 @@
 <head>
     <title id="page-title">Tester</title>
 
-    <link rel="stylesheet" type="text/css" href="app-test/lib/jasmine-1.1.0/jasmine.css">
+    <link rel="stylesheet" type="text/css" href="vendor/jasmine/lib/jasmine-core/jasmine.css">
 
-    <script type="text/javascript" src="extjs/ext-debug.js"></script>
-
-    <script type="text/javascript" src="app-test/lib/jasmine-1.1.0/jasmine.js"></script>
-    <script type="text/javascript" src="app-test/lib/jasmine-1.1.0/jasmine-html.js"></script>
-
-    <!-- include specs here -->
-
-    <!-- test launcher -->
-    <script type="text/javascript" src="app-test.js"></script>
 
 </head>
 <body>
+
+<input id="item_with_value_property"/>
+
 </body>
+
+
+<script src="vendor/jasmine/lib/jasmine-core/jasmine.js"></script>
+<script src="vendor/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+
+<script src="lib/HtmlDataMapper.js"></script>
+<!-- include specs here -->
+<script src="spec/test.spec.js"></script>
+
+
+<!-- test launcher -->
+<script>
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+</script>
+
 </html>
