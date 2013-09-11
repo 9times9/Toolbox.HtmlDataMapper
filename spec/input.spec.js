@@ -6,7 +6,7 @@ describe("Some basic stuff", function(){
 
 describe("Input tests", function(){
     var data = {dataIndex: "123"},
-        mapper = new HtmlDataMapper()
+        mapper = new _9times9.Toolbox.HtmlDataMapper()
     ;
     it("should set input value", function() {
         var mappingData = {
